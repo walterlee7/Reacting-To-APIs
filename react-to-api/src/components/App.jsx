@@ -1,10 +1,13 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import List from './List';
 import People from './People';
+import Stats from './Stats';
 import logo from '../studiologo.jpg';
 import './App.css';
 import 'isomorphic-fetch';
 import 'es6-promise';
+
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 
 class App extends Component {
     constructor(props) {
@@ -12,7 +15,7 @@ class App extends Component {
 
         this.state = {
             a: [],
-            l: '',
+            l: 0,
         }
 
     }
@@ -33,7 +36,7 @@ class App extends Component {
                 return res.json();
             })
             .then((data) => {
-                this.setState({ a: data, l: false });
+                this.setState({ a: data, l: 1 });
             });
     }
 
@@ -43,16 +46,51 @@ class App extends Component {
                 return res.json();
             })
             .then((data) => {
-                this.setState({ a: data, l: true });
+                this.setState({ a: data, l: 2 });
+            });
+    }
+
+    handleStatsOutput(event) {
+        fetch('https://ghibliapi.herokuapp.com/films/')
+            .then((res) => {
+                return res.json();
+            })
+            .then((data) => {
+                this.setState({ a: data, l: 3});
             });
     }
 
     render() {
-        if (this.state.l === false) {
+        if (this.state.l === 0) {
             return (
                 <div className="App">
                     <header className="App-header">
-                    
+                        <img src={logo} className="App-logo" alt="logo" />
+                    </header>
+                    <div className="App-intro">
+                        <button
+                            onClick={(event) => { return this.handleFilmOutput(event) }}
+                        >Load Films</button>
+                    </div>
+                    <div className="App-intro">
+                        <button
+                            onClick={(event) => { return this.handlePeopleOutput(event) }}
+                        >Load People</button>
+                    </div>
+                    <div className="App-intro">
+                        <button
+                            onClick={(event) => { return this.handleStatsOutput(event) }}
+                        >Load Stats</button>
+                    </div>
+                </div>
+            );
+        }
+
+
+        if (this.state.l === 1) {
+            return (
+                <div className="App">
+                    <header className="App-header">
                         <img src={logo} className="App-logo" alt="logo" />
                         <h1 className="App-title">Films</h1>
                     </header>
@@ -67,17 +105,24 @@ class App extends Component {
                         >Load People</button>
                     </div>
                     <div className="App-intro">
+                        <button
+                            onClick={(event) => { return this.handleStatsOutput(event) }}
+                        >Load Stats</button>
+                    </div>
+                    <div className="App-intro card">
                         <List film={this.state.a} />
                     </div>
 
                 </div>
             );
-        } else {
+        } 
+
+        if (this.state.l === 2) {
             return (
                 <div className="App">
                     <header className="App-header">
                         <img src={logo} className="App-logo" alt="logo" />
-                        <h1 className="App-title">Films</h1>
+                        <h1 className="App-title">People</h1>
                     </header>
                     <div className="App-intro">
                         <button
@@ -90,11 +135,46 @@ class App extends Component {
                         >Load People</button>
                     </div>
                     <div className="App-intro">
+                        <button
+                            onClick={(event) => { return this.handleStatsOutput(event) }}
+                        >Load Stats</button>
+                    </div>
+                    <div className="App-intro card">
                         <People film={this.state.a} />
                     </div>
                 </div>
             );
-        }
+        } 
+
+        if (this.state.l === 3) {
+            return (
+                <div className="App">
+                    <header className="App-header">
+                        <img src={logo} className="App-logo" alt="logo" />
+                        <h1 className="App-title">Stats</h1>
+                    </header>
+                    <div className="App-intro">
+                        <button
+                            onClick={(event) => { return this.handleFilmOutput(event) }}
+                        >Load Films</button>
+                    </div>
+                    <div className="App-intro">
+                        <button
+                            onClick={(event) => { return this.handlePeopleOutput(event) }}
+                        >Load People</button>
+                    </div>
+                    <div className="App-intro">
+                        <button
+                            onClick={(event) => { return this.handleStatsOutput(event) }}
+                        >Load Stats</button>
+                    </div>
+                    <div className="App-intro card">
+                        <Stats film={this.state.a} />
+                    </div>
+                </div>
+            );
+        } 
+
 
     }
 }

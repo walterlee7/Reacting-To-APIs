@@ -1,21 +1,18 @@
 import React from 'react';
 import './App.css';
 
-const List = (props) => {
+const Stats = (props) => {
     let listItems = props.film.map((item) => {
 
         return (
             
             <div key={item.id} className="card">
-                {/* <pre>
-                    {JSON.stringify(item, null, 2)}
-                </pre> */}
                 <div className="t">
-                    <div>Title: {item.title}</div>
+                    <div>Release Date: {item.release_date}</div>
                 </div>
 
                 <div className="d">
-                    <div>Description: {item.description}</div>
+                    <div>RT Score: {item.rt_score}</div>
                 </div>
             </div>
         );
@@ -27,4 +24,4 @@ const List = (props) => {
     );
 }
 
-export default List;
+export default Stats;

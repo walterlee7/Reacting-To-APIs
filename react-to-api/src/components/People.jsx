@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './App.css';
 
 const People = (props) => {
     let peopleItems = props.film.map((item) => {
@@ -8,11 +8,11 @@ const People = (props) => {
             
             <div key={item.id} className="card">
                 <div className="d">
-                    <div>{item.director}</div>
+                    <div>Director: {item.director}</div>
                 </div>
 
                 <div className="p">
-                    <div>{item.producer}</div>
+                    <div>Producer: {item.producer}</div>
                 </div>
             </div>
         );

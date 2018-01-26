@@ -1,25 +1,31 @@
 .App {
   text-align: center;
+  position: relative;
 }
 
  .App-logo {
-  animation: App-logo-spin infinite 0.2s linear;
+  /* animation: App-logo-spin infinite 0.2s linear; */
   height: 400px;
 } 
 
-/.App-header {
-  background-color: #222;
-  height: 150px;
+.App-header {
+  background-color: silver;
+  height: 450px;
   padding: 20px;
   color: white;
+  margin: 1em;
+  
 }
 
 .App-title {
   font-size: 1.5em;
+  background-color: lightgreen;
+  border-radius: 10em;
 }
 
 .App-intro {
   font-size: large;
+  margin: 1em;
 } 
 
 @keyframes App-logo-spin {
@@ -28,6 +34,13 @@
 }
 
 .card {
-  border: 0.01em solid black;
-  margin: 0.1em;
+  border: 0.1em solid black;
+  margin: 0.15em;
+  display: inline-block;
+  padding: 0.15em;
+ 
+}
+
+.button {
+  display: inline-block;
 }
