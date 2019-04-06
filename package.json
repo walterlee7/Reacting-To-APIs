@@ -2,6 +2,7 @@
     "homepage": "https://walterlee7.github.io/Reacting-To-APIs",
     "name": "react-to-api",
     "version": "0.1.0",
+    "main": "index.js",
     "dependencies": {
         "react": "^16.2.0",
         "react-dom": "^16.2.0",
@@ -13,8 +14,10 @@
         "build": "react-scripts build",
         "test": "react-scripts test --env=jsdom",
         "eject": "react-scripts eject",
-        "deploy": "npm run build && gh-pages -d build"
+        "deploy": "yarn build && gh-pages -d build"
     },
+    "author": "Walter Lee",
+    "license": "ISC",
     "browserslist": [
         ">0.2%",
         "not dead",
