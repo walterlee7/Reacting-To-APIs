@@ -1,13 +1,9 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import List from './List';
 import People from './People';
 import Stats from './Stats';
 import logo from '../studiologo.jpg';
 import './App.css';
-import 'isomorphic-fetch';
-import 'es6-promise';
-
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 
 class App extends Component {
     constructor(props) {
@@ -56,7 +52,7 @@ class App extends Component {
                 return res.json();
             })
             .then((data) => {
-                this.setState({ a: data, l: 3});
+                this.setState({ a: data, l: 3 });
             });
     }
 
@@ -115,7 +111,7 @@ class App extends Component {
 
                 </div>
             );
-        } 
+        }
 
         if (this.state.l === 2) {
             return (
@@ -144,7 +140,7 @@ class App extends Component {
                     </div>
                 </div>
             );
-        } 
+        }
 
         if (this.state.l === 3) {
             return (
@@ -173,7 +169,7 @@ class App extends Component {
                     </div>
                 </div>
             );
-        } 
+        }
 
 
     }

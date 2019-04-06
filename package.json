@@ -1,0 +1,27 @@
+{
+    "homepage": "https://walterlee7.github.io/Reacting-To-APIs",
+    "name": "react-to-api",
+    "version": "0.1.0",
+    "dependencies": {
+        "react": "^16.2.0",
+        "react-dom": "^16.2.0",
+        "react-router-dom": "^4.2.2",
+        "react-scripts": "^2.1.8"
+    },
+    "scripts": {
+        "start": "PORT=3010 react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test --env=jsdom",
+        "eject": "react-scripts eject",
+        "deploy": "npm run build && gh-pages -d build"
+    },
+    "browserslist": [
+        ">0.2%",
+        "not dead",
+        "not ie <= 11",
+        "not op_mini all"
+    ],
+    "devDependencies": {
+        "gh-pages": "^2.0.1"
+    }
+}
