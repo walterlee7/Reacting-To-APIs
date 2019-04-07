@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import List from './List';
-import People from './People';
-import Stats from './Stats';
+// import People from './People';
+// import Stats from './Stats';
 import logo from '../studiologo.jpg';
 import './App.css';
 
@@ -37,7 +37,7 @@ class App extends Component {
     }
 
     handlePeopleOutput(event) {
-        fetch('https://ghibliapi.herokuapp.com/films/')
+        fetch('https://ghibliapi.herokuapp.com/people/')
             .then((res) => {
                 return res.json();
             })
@@ -47,7 +47,7 @@ class App extends Component {
     }
 
     handleStatsOutput(event) {
-        fetch('https://ghibliapi.herokuapp.com/films/')
+        fetch('https://ghibliapi.herokuapp.com/locations/')
             .then((res) => {
                 return res.json();
             })
@@ -57,31 +57,40 @@ class App extends Component {
     }
 
     render() {
-        // if (this.state.l === 0) {
+
         return (
             <div className="App">
                 <header className="App-header">
                     <img src={logo} className="App-logo" alt="logo" />
                 </header>
-                <div className="App-intro">
-                    <button
+                {/* <div className="App-intro">
+                    <button className="btn"
                         onClick={(event) => { return this.handleFilmOutput(event) }}
                     >Load Films</button>
                 </div>
                 <div className="App-intro">
-                    <button
+                    <button className="btn"
                         onClick={(event) => { return this.handlePeopleOutput(event) }}
                     >Load People</button>
                 </div>
                 <div className="App-intro">
-                    <button
+                    <button className="btn"
                         onClick={(event) => { return this.handleStatsOutput(event) }}
                     >Load Stats</button>
+                </div> */}
+                <div className="App-intro card">
+                    <List film={this.state.a} />
                 </div>
+                {/* <div className="App-intro card">
+                    <People film={this.state.a} />
+                </div>
+                <div className="App-intro card">
+                    <Stats film={this.state.a} />
+                </div> */}
             </div>
-        );
-        // }
 
+
+        );
 
         // if (this.state.l === 1) {
         //     return (

@@ -1,20 +1,29 @@
 .App {
   text-align: center;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
   position: relative;
 }
 
+.btn {
+    border: 0.5px solid black;
+    border-radius: 25px;
+}
+
  .App-logo {
-  /* animation: App-logo-spin infinite 0.2s linear; */
+  /* animation: App-logo-spin infinite 20s linear; */
   height: 400px;
-} 
+}
 
 .App-header {
-  background-color: silver;
+  /* background-color: silver;
   height: 450px;
   padding: 20px;
   color: white;
-  margin: 1em;
-  
+  margin: 1em; */
+
 }
 
 .App-title {
@@ -24,9 +33,25 @@
 }
 
 .App-intro {
-  font-size: large;
-  margin: 1em;
-} 
+  /* font-size: large;
+  margin: 1em; */
+  text-align: center;
+  background-color: blue;
+  width: 100%;
+  position: absolute;
+}
+
+.t {
+    background-color: silver;
+}
+
+.p {
+    background-color: yellow;
+}
+
+.s {
+    background-color: rgb(21, 255, 0);
+}
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
@@ -36,11 +61,11 @@
 .card {
   border: 0.1em solid black;
   margin: 0.15em;
-  display: inline-block;
+  /* display: inline-block; */
   padding: 0.15em;
- 
+
 }
 
-.button {
+/* .button {
   display: inline-block;
-}
+} */
