@@ -1,11 +1,10 @@
 import React from 'react';
-import './App.css';
 
 const People = (props) => {
     let peopleItems = props.film.map((item) => {
 
         return (
-            
+
             <div key={item.id} className="card">
                 <div className="d">
                     <div>Director: {item.director}</div>

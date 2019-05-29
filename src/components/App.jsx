@@ -54,6 +54,7 @@ class App extends Component {
     // }
 
     render() {
+        console.log(this.state.a);
 
         return (
             <div className="App">
