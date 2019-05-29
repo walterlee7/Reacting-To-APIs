@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import List from './List';
 // import People from './People';
 // import Stats from './Stats';
-import logo from '../studiologo.jpg';
 import './App.css';
 
 class App extends Component {
@@ -61,8 +60,12 @@ class App extends Component {
         return (
             <div className="App">
                 <header className="App-header">
-                    <img src={logo} className="App-logo" alt="logo" />
+                    <p>React API Fetch - Studio Ghibli API</p>
                 </header>
+
+
+
+
                 {/* <div className="App-intro">
                     <button className="btn"
                         onClick={(event) => { return this.handleFilmOutput(event) }}
