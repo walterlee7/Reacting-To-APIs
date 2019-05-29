@@ -10,9 +10,7 @@ class App extends Component {
 
         this.state = {
             a: [],
-            l: 0,
         }
-
     }
 
     componentDidMount() {
@@ -25,165 +23,50 @@ class App extends Component {
             });
     }
 
-    handleFilmOutput(event) {
-        fetch('https://ghibliapi.herokuapp.com/films/')
-            .then((res) => {
-                return res.json();
-            })
-            .then((data) => {
-                this.setState({ a: data, l: 1 });
-            });
-    }
+    // handleFilmOutput() {
+    //     fetch('https://ghibliapi.herokuapp.com/films/')
+    //         .then((res) => {
+    //             return res.json();
+    //         })
+    //         .then((data) => {
+    //             this.setState({ a: data, l: 1 });
+    //         });
+    // }
 
-    handlePeopleOutput(event) {
-        fetch('https://ghibliapi.herokuapp.com/people/')
-            .then((res) => {
-                return res.json();
-            })
-            .then((data) => {
-                this.setState({ a: data, l: 2 });
-            });
-    }
+    // handlePeopleOutput() {
+    //     fetch('https://ghibliapi.herokuapp.com/people/')
+    //         .then((res) => {
+    //             return res.json();
+    //         })
+    //         .then((data) => {
+    //             this.setState({ a: data, l: 2 });
+    //         });
+    // }
 
-    handleStatsOutput(event) {
-        fetch('https://ghibliapi.herokuapp.com/locations/')
-            .then((res) => {
-                return res.json();
-            })
-            .then((data) => {
-                this.setState({ a: data, l: 3 });
-            });
-    }
+    // handleStatsOutput() {
+    //     fetch('https://ghibliapi.herokuapp.com/locations/')
+    //         .then((res) => {
+    //             return res.json();
+    //         })
+    //         .then((data) => {
+    //             this.setState({ a: data, l: 3 });
+    //         });
+    // }
 
     render() {
 
         return (
             <div className="App">
-                <header className="App-header">
-                    <p>React API Fetch - Studio Ghibli API</p>
-                </header>
+                <h2 className="App-header">
+                    React API Fetch - Studio Ghibli API
+                </h2>
 
-
-
-
-                {/* <div className="App-intro">
-                    <button className="btn"
-                        onClick={(event) => { return this.handleFilmOutput(event) }}
-                    >Load Films</button>
-                </div>
-                <div className="App-intro">
-                    <button className="btn"
-                        onClick={(event) => { return this.handlePeopleOutput(event) }}
-                    >Load People</button>
-                </div>
-                <div className="App-intro">
-                    <button className="btn"
-                        onClick={(event) => { return this.handleStatsOutput(event) }}
-                    >Load Stats</button>
-                </div> */}
                 <div className="App-intro card">
                     <List film={this.state.a} />
                 </div>
-                {/* <div className="App-intro card">
-                    <People film={this.state.a} />
-                </div>
-                <div className="App-intro card">
-                    <Stats film={this.state.a} />
-                </div> */}
+
             </div>
-
-
         );
-
-        // if (this.state.l === 1) {
-        //     return (
-        //         <div className="App">
-        //             <header className="App-header">
-        //                 <img src={logo} className="App-logo" alt="logo" />
-        //                 <h1 className="App-title">Films</h1>
-        //             </header>
-        //             <div className="App-intro">
-        //                 <button
-        //                     onClick={(event) => { return this.handleFilmOutput(event) }}
-        //                 >Load Films</button>
-        //             </div>
-        //             <div className="App-intro">
-        //                 <button
-        //                     onClick={(event) => { return this.handlePeopleOutput(event) }}
-        //                 >Load People</button>
-        //             </div>
-        //             <div className="App-intro">
-        //                 <button
-        //                     onClick={(event) => { return this.handleStatsOutput(event) }}
-        //                 >Load Stats</button>
-        //             </div>
-        //             <div className="App-intro card">
-        //                 <List film={this.state.a} />
-        //             </div>
-
-        //         </div>
-        //     );
-        // }
-
-        // if (this.state.l === 2) {
-        //     return (
-        //         <div className="App">
-        //             <header className="App-header">
-        //                 <img src={logo} className="App-logo" alt="logo" />
-        //                 <h1 className="App-title">People</h1>
-        //             </header>
-        //             <div className="App-intro">
-        //                 <button
-        //                     onClick={(event) => { return this.handleFilmOutput(event) }}
-        //                 >Load Films</button>
-        //             </div>
-        //             <div className="App-intro">
-        //                 <button
-        //                     onClick={(event) => { return this.handlePeopleOutput(event) }}
-        //                 >Load People</button>
-        //             </div>
-        //             <div className="App-intro">
-        //                 <button
-        //                     onClick={(event) => { return this.handleStatsOutput(event) }}
-        //                 >Load Stats</button>
-        //             </div>
-        //             <div className="App-intro card">
-        //                 <People film={this.state.a} />
-        //             </div>
-        //         </div>
-        //     );
-        // }
-
-        // if (this.state.l === 3) {
-        //     return (
-        //         <div className="App">
-        //             <header className="App-header">
-        //                 <img src={logo} className="App-logo" alt="logo" />
-        //                 <h1 className="App-title">Stats</h1>
-        //             </header>
-        //             <div className="App-intro">
-        //                 <button
-        //                     onClick={(event) => { return this.handleFilmOutput(event) }}
-        //                 >Load Films</button>
-        //             </div>
-        //             <div className="App-intro">
-        //                 <button
-        //                     onClick={(event) => { return this.handlePeopleOutput(event) }}
-        //                 >Load People</button>
-        //             </div>
-        //             <div className="App-intro">
-        //                 <button
-        //                     onClick={(event) => { return this.handleStatsOutput(event) }}
-        //                 >Load Stats</button>
-        //             </div>
-        //             <div className="App-intro card">
-        //                 <Stats film={this.state.a} />
-        //             </div>
-        //         </div>
-        //     );
-        // }
-
-
     }
 }
 
