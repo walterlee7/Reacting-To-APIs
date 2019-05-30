@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import List from './List';
-// import People from './People';
-// import Stats from './Stats';
 import './App.css';
 import { images } from '../asset';
 
