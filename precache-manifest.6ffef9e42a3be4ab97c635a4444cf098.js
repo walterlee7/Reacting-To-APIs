@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/Reacting-To-APIs/static/media/marnie.4c1aea48.jpg"
   },
   {
-    "revision": "72206435b2336fb445e2",
-    "url": "/Reacting-To-APIs/static/css/main.c567fdd8.chunk.css"
+    "revision": "b1906b845cfa49b74717",
+    "url": "/Reacting-To-APIs/static/css/main.c1f886c4.chunk.css"
   },
   {
     "revision": "c7506e1e8dcc1e89ec47",
@@ -52,12 +52,12 @@ self.__precacheManifest = [
     "url": "/Reacting-To-APIs/static/media/live.3d165f69.jpg"
   },
   {
-    "revision": "72206435b2336fb445e2",
-    "url": "/Reacting-To-APIs/static/js/main.6bcb9aa2.chunk.js"
+    "revision": "b1906b845cfa49b74717",
+    "url": "/Reacting-To-APIs/static/js/main.2c04a1f8.chunk.js"
   },
   {
-    "revision": "fe9ba7275651efcafa626b2dda5d6787",
-    "url": "/Reacting-To-APIs/static/media/mononoke.fe9ba727.jpg"
+    "revision": "1ee3e055d2be999f9ac3395b5e33234a",
+    "url": "/Reacting-To-APIs/static/media/mononoke.1ee3e055.jpg"
   },
   {
     "revision": "15c831e85f4b9dd45f16c9ae598a00b6",
@@ -104,7 +104,7 @@ self.__precacheManifest = [
     "url": "/Reacting-To-APIs/static/media/studioBackground.2a682540.jpg"
   },
   {
-    "revision": "beb82f0cb16822e6d85ee3f5d5c97b5c",
+    "revision": "243ec3b185001c6c21c4fcfb78da00e8",
     "url": "/Reacting-To-APIs/index.html"
   }
 ];
