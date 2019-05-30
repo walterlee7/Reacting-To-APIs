@@ -39,7 +39,7 @@ class App extends Component {
                     React API Fetch - Studio Ghibli API
                 </h2>
 
-                <div className="App-intro card">
+                <div className="card-container">
                     <List film={this.state.a} />
                 </div>
 
