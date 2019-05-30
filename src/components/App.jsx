@@ -3,6 +3,7 @@ import List from './List';
 // import People from './People';
 // import Stats from './Stats';
 import './App.css';
+import { images } from '../asset';
 
 class App extends Component {
     constructor(props) {
@@ -19,43 +20,21 @@ class App extends Component {
                 return res.json();
             })
             .then((data) => {
-                this.setState({ a: data });
+                let newData = data.map(item => {
+                    // console.log(item);
+                    let imageObj = images.find(image => {
+                        return item.id === image.id
+                    });
+                    if (!!imageObj) item.imageUrl = imageObj.url
+                    return item;
+                });
+                console.log(newData);
+                this.setState({ a: newData });
             });
     }
 
-    // handleFilmOutput() {
-    //     fetch('https://ghibliapi.herokuapp.com/films/')
-    //         .then((res) => {
-    //             return res.json();
-    //         })
-    //         .then((data) => {
-    //             this.setState({ a: data, l: 1 });
-    //         });
-    // }
-
-    // handlePeopleOutput() {
-    //     fetch('https://ghibliapi.herokuapp.com/people/')
-    //         .then((res) => {
-    //             return res.json();
-    //         })
-    //         .then((data) => {
-    //             this.setState({ a: data, l: 2 });
-    //         });
-    // }
-
-    // handleStatsOutput() {
-    //     fetch('https://ghibliapi.herokuapp.com/locations/')
-    //         .then((res) => {
-    //             return res.json();
-    //         })
-    //         .then((data) => {
-    //             this.setState({ a: data, l: 3 });
-    //         });
-    // }
-
     render() {
-        console.log(this.state.a);
-
+        // console.log(this.state.a);
         return (
             <div className="App">
                 <h2 className="App-header">
