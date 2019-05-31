@@ -9,7 +9,11 @@ class App extends Component {
 
         this.state = {
             a: [],
+            lineHeightChange: 0,
+            opacityChange: 0
         }
+
+        this.slide = this.slide.bind(this);
     }
 
     componentDidMount() {
@@ -31,8 +35,16 @@ class App extends Component {
             });
     }
 
+    slide = () => {
+        this.setState({
+            lineHeightChange: 1,
+            opacityChange: 1
+        })
+    }
+
     render() {
         // console.log(this.state.a);
+        console.log(this.slide);
         return (
             <div className="App">
                 <h2 className="App-header">
@@ -40,7 +52,7 @@ class App extends Component {
                 </h2>
 
                 <div className="card-container">
-                    <List film={this.state.a} />
+                    <List slide={this.slide} film={this.state.a} height={this.state.lineHeightChange} opacity={this.state.opacityChange} />
                 </div>
 
             </div>
