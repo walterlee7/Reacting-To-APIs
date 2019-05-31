@@ -2,35 +2,31 @@ import React from 'react';
 
 const List = (props) => {
     let listItems = props.film.map((item) => {
-        console.log(item.imageUrl);
+        //console.log(item.imageUrl);
         return (
             <div key={item.id} className="card">
                 {item.imageUrl ? (
                     <img src={item.imageUrl} alt="movie" />
                 ) : null}
-
-                <div className="t">
+                <div className="title">
                     <div>Title: {item.title}</div>
                 </div>
-                <div className="t">
+                <div className="description">
                     <div>Description: {item.description}</div>
                 </div>
-                <div className="p">
+                <div className="director">
                     <div>Director: {item.director}</div>
                 </div>
-
-                <div className="p">
+                <div className="producer">
                     <div>Producer: {item.producer}</div>
                 </div>
-                <div className="s">
+                <div className="date">
                     <div>Release Date: {item.release_date}</div>
                 </div>
-                <div className="s">
+                <div className="score">
                     <div>RT Score: {item.rt_score}</div>
                 </div>
             </div>
-
-
         );
     });
     return (
