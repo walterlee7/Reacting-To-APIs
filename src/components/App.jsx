@@ -14,6 +14,7 @@ class App extends Component {
         }
 
         this.slide = this.slide.bind(this);
+        this.slideBack = this.slideBack.bind(this);
     }
 
     componentDidMount() {
@@ -42,6 +43,13 @@ class App extends Component {
         })
     }
 
+    slideBack = () => {
+        this.setState({
+            lineHeightChange: 0,
+            opacityChange: 0
+        })
+    }
+
     render() {
         // console.log(this.state.a);
         console.log(this.slide);
@@ -51,8 +59,12 @@ class App extends Component {
                     React API Fetch - Studio Ghibli API
                 </h2>
 
+                <h2 className="instructions">
+                    **click movie image to see info**
+                </h2>
+
                 <div className="card-container">
-                    <List slide={this.slide} film={this.state.a} height={this.state.lineHeightChange} opacity={this.state.opacityChange} />
+                    <List slideBack={this.slideBack} slide={this.slide} film={this.state.a} height={this.state.lineHeightChange} opacity={this.state.opacityChange} />
                 </div>
 
             </div>
