@@ -8,5 +8,7 @@ To add movie covers for each movie, each locally saved movie image was converted
 
 Credit given to Joel Venable (https://github.com/JoelVenable) for helping me with the syntax for local image file imports into an Image URL string, and image URL object injection into the fetched API.
 
+To reveal movie info, a click method was added on the img element to reveal info via css line-height and opacity.
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
