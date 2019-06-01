@@ -88,7 +88,7 @@ class App extends Component {
             };
         }
         let arr = this.state.films;
-        //console.log(arr);
+        console.log(arr);
 
         if (num === 1) {
             arr.sort(compareValues('title'));
@@ -99,6 +99,12 @@ class App extends Component {
             })
         } else if (num === 2) {
             arr.sort(compareValues('title', 'desc'));
+
+            this.setState({
+                films: arr
+            })
+        } else if (num === 3) {
+            arr.sort(compareValues('release_date'));
 
             this.setState({
                 films: arr
@@ -128,6 +134,10 @@ class App extends Component {
 
                     <div id="button-container">
                         <button onClick={() => { this.sort(2) }}>Sort by Z to A</button>
+                    </div>
+
+                    <div id="button-container">
+                        <button onClick={() => { this.sort(3) }}>Sort by Oldest</button>
                     </div>
                 </div>
 
