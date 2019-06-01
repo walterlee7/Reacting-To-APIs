@@ -58,16 +58,20 @@ body {
     width: 315px;
 }
 
+#sort-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 #button-container {
     text-align: center
 }
 
 button {
     background-color: rgb(209, 234, 255);
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 0.25em;
+    margin-right: 0.25em;
     display: inline-block;
     padding-top: 0.25em;
     padding-bottom: 0.25em;

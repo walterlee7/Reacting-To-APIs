@@ -63,7 +63,7 @@ class App extends Component {
         })
     }
 
-    sort() {
+    sort(num) {
         function compareValues(key, order = 'asc') {
             return function (a, b) {
                 if (!a.hasOwnProperty(key) || !b.hasOwnProperty(key)) {
@@ -88,13 +88,23 @@ class App extends Component {
             };
         }
         let arr = this.state.films;
-        console.log(arr);
-        arr.sort(compareValues('title'));
-        console.dir('after sort: ' + arr[2].title);
+        //console.log(arr);
 
-        this.setState({
-            films: arr
-        })
+        if (num === 1) {
+            arr.sort(compareValues('title'));
+            //console.dir('after sort: ' + arr[2].title);
+
+            this.setState({
+                films: arr
+            })
+        } else if (num === 2) {
+            arr.sort(compareValues('title', 'desc'));
+
+            this.setState({
+                films: arr
+            })
+        }
+
     }
 
     render() {
@@ -111,8 +121,14 @@ class App extends Component {
                     </h2>
                 </div>
 
-                <div id="button-container">
-                    <button onClick={this.sort}>Sort by A to Z</button>
+                <div id="sort-buttons">
+                    <div id="button-container">
+                        <button onClick={() => { this.sort(1) }}>Sort by A to Z</button>
+                    </div>
+
+                    <div id="button-container">
+                        <button onClick={() => { this.sort(2) }}>Sort by Z to A</button>
+                    </div>
                 </div>
 
                 <div className="card-container">
