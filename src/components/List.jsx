@@ -33,7 +33,7 @@ const List = (props) => {
         );
     });
     return (
-        <div className="h5">{listItems}</div>
+        <div className="card-container">{listItems}</div>
     );
 }
 

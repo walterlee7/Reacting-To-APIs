@@ -1,6 +1,6 @@
 body {
     background-image: url("../asset/studioBackground.jpg");
-    background-size: 200px 150px;
+    background-size: 125px 75px;
 }
 
 .App-header {
@@ -41,7 +41,7 @@ body {
 
 .card-container {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
