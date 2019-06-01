@@ -8,7 +8,7 @@ class App extends Component {
         super(props)
 
         this.state = {
-            a: [],
+            films: [],
             heightChange: 0,
             opacityChange: 0,
             transition: 'all ' + 1 + 's ease-out'
@@ -33,7 +33,7 @@ class App extends Component {
                     return item;
                 });
                 // console.log(newData);
-                this.setState({ a: newData });
+                this.setState({ films: newData });
             });
     }
 
@@ -63,7 +63,7 @@ class App extends Component {
     }
 
     render() {
-        // console.log(this.state.a);
+        // console.log(this.state.films);
         return (
             <div className="App">
                 <h2 className="App-header">
@@ -75,7 +75,7 @@ class App extends Component {
                 </h2>
 
                 <div className="card-container">
-                    <List slideBack={this.slideBack} slide={this.slide} film={this.state.a} height={this.state.heightChange} opacity={this.state.opacityChange} transition={this.state.transition} />
+                    <List slideBack={this.slideBack} slide={this.slide} films={this.state.films} height={this.state.heightChange} opacity={this.state.opacityChange} transition={this.state.transition} />
                 </div>
 
             </div>

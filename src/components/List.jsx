@@ -2,7 +2,7 @@ import React from 'react';
 
 const List = (props) => {
 
-    let listItems = props.film.map((item) => {
+    let listItems = props.films.map((item) => {
         //console.log(item.imageUrl);
         return (
             <div key={item.id} className="card">
