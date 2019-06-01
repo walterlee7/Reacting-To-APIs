@@ -9,7 +9,7 @@ class App extends Component {
 
         this.state = {
             a: [],
-            lineHeightChange: 0,
+            heightChange: 0,
             opacityChange: 0
         }
 
@@ -38,14 +38,14 @@ class App extends Component {
 
     slide = () => {
         this.setState({
-            lineHeightChange: 1,
+            heightChange: 100 + '%',
             opacityChange: 1
         })
     }
 
     slideBack = () => {
         this.setState({
-            lineHeightChange: 0,
+            heightChange: 0,
             opacityChange: 0
         })
     }
@@ -64,7 +64,7 @@ class App extends Component {
                 </h2>
 
                 <div className="card-container">
-                    <List slideBack={this.slideBack} slide={this.slide} film={this.state.a} height={this.state.lineHeightChange} opacity={this.state.opacityChange} />
+                    <List slideBack={this.slideBack} slide={this.slide} film={this.state.a} height={this.state.heightChange} opacity={this.state.opacityChange} />
                 </div>
 
             </div>

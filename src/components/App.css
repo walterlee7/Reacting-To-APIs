@@ -69,6 +69,5 @@ img {
 }
 
 #id-container {
-    line-height: 100%;
-    transition: line-height 8s;
+    transition: all 10s ease-out;
 }

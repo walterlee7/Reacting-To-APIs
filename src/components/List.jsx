@@ -11,7 +11,7 @@ const List = (props) => {
                     }
                         src={item.imageUrl} alt="movie" />
                 ) : null}
-                <div id="info-container" onClick={props.slideBack} style={{ lineHeight: props.height, opacity: props.opacity }}>
+                <div id="info-container" onClick={props.slideBack} style={{ height: props.height, opacity: props.opacity, transition: 'all ' + 1 + 's ease-out' }}>
                     <div className="title">
                         <div>Title: {item.title}</div>
                     </div>
