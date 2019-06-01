@@ -38,6 +38,8 @@ class App extends Component {
     }
 
     slide = () => {
+
+        //toggle for showing movie info
         const { open } = this.state
 
         open ? this.setState({
@@ -50,7 +52,7 @@ class App extends Component {
             opacityChange: 1
         })
 
-        console.log(this.state.open);
+        // console.log(this.state.open);
     }
 
     slideBack = () => {
@@ -62,7 +64,6 @@ class App extends Component {
 
     render() {
         // console.log(this.state.a);
-        // console.log(this.slide);
         return (
             <div className="App">
                 <h2 className="App-header">
