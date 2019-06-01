@@ -60,7 +60,7 @@ body {
 
 #sort-buttons {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
 }
 
@@ -70,13 +70,13 @@ body {
 
 button {
     background-color: rgb(209, 234, 255);
-    margin-left: 0.25em;
-    margin-right: 0.25em;
     display: inline-block;
+    margin-left: 0.1em;
+    margin-right: 0.1em;
     padding-top: 0.25em;
     padding-bottom: 0.25em;
-    padding-left: 1em;
-    padding-right: 1em;
+    border: 0.5px solid black;
+    box-shadow: rgba(0, 0, 0, 0.514) 7px 7px 7px;
     border-radius: 15px;
     font-size: 20px;
 }

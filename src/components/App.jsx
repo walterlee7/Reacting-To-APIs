@@ -109,6 +109,12 @@ class App extends Component {
             this.setState({
                 films: arr
             })
+        } else if (num === 4) {
+            arr.sort(compareValues('release_date', 'desc'));
+
+            this.setState({
+                films: arr
+            })
         }
 
     }
@@ -138,6 +144,10 @@ class App extends Component {
 
                     <div id="button-container">
                         <button onClick={() => { this.sort(3) }}>Sort by Oldest</button>
+                    </div>
+
+                    <div id="button-container">
+                        <button onClick={() => { this.sort(4) }}>Sort by Newest</button>
                     </div>
                 </div>
 
