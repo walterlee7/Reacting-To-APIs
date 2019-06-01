@@ -16,6 +16,7 @@ class App extends Component {
 
         this.slide = this.slide.bind(this);
         this.slideBack = this.slideBack.bind(this);
+        this.sort = this.sort.bind(this);
     }
 
     componentDidMount() {
@@ -62,6 +63,40 @@ class App extends Component {
         })
     }
 
+    sort() {
+        function compareValues(key, order = 'asc') {
+            return function (a, b) {
+                if (!a.hasOwnProperty(key) || !b.hasOwnProperty(key)) {
+                    // property doesn't exist on either object
+                    return 0;
+                }
+
+                const varA = (typeof a[key] === 'string') ?
+                    a[key].toUpperCase() : a[key];
+                const varB = (typeof b[key] === 'string') ?
+                    b[key].toUpperCase() : b[key];
+
+                let comparison = 0;
+                if (varA > varB) {
+                    comparison = 1;
+                } else if (varA < varB) {
+                    comparison = -1;
+                }
+                return (
+                    (order === 'desc') ? (comparison * -1) : comparison
+                );
+            };
+        }
+        let arr = this.state.films;
+        console.log(arr);
+        arr.sort(compareValues('title'));
+        console.dir('after sort: ' + arr[2].title);
+
+        this.setState({
+            films: arr
+        })
+    }
+
     render() {
         // console.log(this.state.films);
         return (
@@ -70,9 +105,15 @@ class App extends Component {
                     React API Fetch - Studio Ghibli API
                 </h2>
 
-                <h2 className="instructions">
-                    **click movie image to see info**
-                </h2>
+                <div id="instructions-container">
+                    <h2 className="instructions">
+                        ***click movie image to see info***
+                    </h2>
+                </div>
+
+                <div id="button-container">
+                    <button onClick={this.sort}>Sort by A to Z</button>
+                </div>
 
                 <div className="card-container">
                     <List slideBack={this.slideBack} slide={this.slide} films={this.state.films} height={this.state.heightChange} opacity={this.state.opacityChange} transition={this.state.transition} />

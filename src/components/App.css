@@ -4,7 +4,7 @@ body {
 }
 
 .App-header {
-    background-color: rgb(116, 190, 250);
+    background-color: rgb(77, 172, 250);
     left: 0;
     right: 0;
     margin-left: auto;
@@ -18,17 +18,19 @@ body {
     box-shadow: rgba(0, 0, 0, 0.514) 7px 7px 7px;
 }
 
+#instructions-container {
+    text-align: center;
+}
+
 .instructions {
-    background-color: rgb(180, 204, 224);
+    background-color: rgb(145, 205, 255);
     left: 0;
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    text-align: center;
-    width: 55%;
-    margin-top: 0.5em;
-    padding: 1em;
-    border-radius: 15px;
+    display: inline-block;
+    padding: 0.5em;
+    border-radius: 10px;
     font-size: 20px;
     box-shadow: rgba(0, 0, 0, 0.514) 7px 7px 7px;
 }
@@ -54,6 +56,25 @@ body {
     margin-left: auto;
     margin-right: auto;
     width: 315px;
+}
+
+#button-container {
+    text-align: center
+}
+
+button {
+    background-color: rgb(209, 234, 255);
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+    padding-left: 1em;
+    padding-right: 1em;
+    border-radius: 15px;
+    font-size: 20px;
 }
 
 img {
