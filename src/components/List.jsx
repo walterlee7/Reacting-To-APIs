@@ -7,11 +7,9 @@ const List = (props) => {
         return (
             <div key={item.id} className="card">
                 {item.imageUrl ? (
-                    <img onClick={props.slide
-                    }
-                        src={item.imageUrl} alt="movie" />
+                    <img onClick={props.slide} src={item.imageUrl} alt="movie" />
                 ) : null}
-                <div id="info-container" onClick={props.slideBack} style={{ height: props.height, opacity: props.opacity, transition: 'all ' + 1 + 's ease-out' }}>
+                <div id="info-container" onClick={props.slideBack} style={{ height: props.height, opacity: props.opacity, transition: props.transition }}>
                     <div className="title">
                         <div>Title: {item.title}</div>
                     </div>

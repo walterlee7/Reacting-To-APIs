@@ -10,7 +10,8 @@ class App extends Component {
         this.state = {
             a: [],
             heightChange: 0,
-            opacityChange: 0
+            opacityChange: 0,
+            transition: 'all ' + 1 + 's ease-out'
         }
 
         this.slide = this.slide.bind(this);
@@ -31,16 +32,25 @@ class App extends Component {
                     if (!!imageObj) item.imageUrl = imageObj.url
                     return item;
                 });
-                console.log(newData);
+                // console.log(newData);
                 this.setState({ a: newData });
             });
     }
 
     slide = () => {
-        this.setState({
+        const { open } = this.state
+
+        open ? this.setState({
+            open: false,
+            heightChange: 0,
+            opacityChange: 0
+        }) : this.setState({
+            open: true,
             heightChange: 100 + '%',
             opacityChange: 1
         })
+
+        console.log(this.state.open);
     }
 
     slideBack = () => {
@@ -52,7 +62,7 @@ class App extends Component {
 
     render() {
         // console.log(this.state.a);
-        console.log(this.slide);
+        // console.log(this.slide);
         return (
             <div className="App">
                 <h2 className="App-header">
@@ -64,7 +74,7 @@ class App extends Component {
                 </h2>
 
                 <div className="card-container">
-                    <List slideBack={this.slideBack} slide={this.slide} film={this.state.a} height={this.state.heightChange} opacity={this.state.opacityChange} />
+                    <List slideBack={this.slideBack} slide={this.slide} film={this.state.a} height={this.state.heightChange} opacity={this.state.opacityChange} transition={this.state.transition} />
                 </div>
 
             </div>
