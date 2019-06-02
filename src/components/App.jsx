@@ -38,7 +38,7 @@ class App extends Component {
             });
     }
 
-    slide = () => {
+    slide() {
 
         //toggle for showing movie info
         const { open } = this.state
@@ -56,7 +56,7 @@ class App extends Component {
         // console.log(this.state.open);
     }
 
-    slideBack = () => {
+    slideBack() {
         this.setState({
             heightChange: 0,
             opacityChange: 0
@@ -115,6 +115,8 @@ class App extends Component {
             this.setState({
                 films: arr
             })
+        } else {
+            console.log('sorting error');
         }
 
     }

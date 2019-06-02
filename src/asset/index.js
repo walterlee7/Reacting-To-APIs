@@ -6,7 +6,6 @@ import grave from "./grave.jpg";
 import howl from "./howl.jpg";
 import kaguya from "./kaguya.jpg";
 import kiki from "./kiki.jpg";
-import live from "./live.jpg"
 import marnie from "./marnie.jpg";
 import mononoke from "./mononoke.jpg";
 import poko from "./poko.jpg";
@@ -44,9 +43,6 @@ export const images = [{
 }, {
     id: "ea660b10-85c4-4ae3-8a5f-41cea3648e3e",
     url: kiki
-}, {
-    id: "last",
-    url: live
 }, {
     id: "0440483e-ca0e-4120-8c50-4c8cd9b965d6",
     url: marnie
