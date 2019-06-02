@@ -6,6 +6,7 @@ const List = (props) => {
         //console.log(item.imageUrl);
         return (
             <div key={item.id} className="card">
+                {/* ternary operator to check if imageURL exists*/}
                 {item.imageUrl ? (
                     <img onClick={props.slide} src={item.imageUrl} alt="movie" />
                 ) : null}

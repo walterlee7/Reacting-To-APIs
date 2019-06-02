@@ -71,6 +71,7 @@ class App extends Component {
                     return 0;
                 }
 
+                //ternary operator to check the type of the key parameter
                 const varA = (typeof a[key] === 'string') ?
                     a[key].toUpperCase() : a[key];
                 const varB = (typeof b[key] === 'string') ?
@@ -90,6 +91,7 @@ class App extends Component {
         let arr = this.state.films;
         console.log(arr);
 
+        //conditional to delineate sorting types
         if (num === 1) {
             arr.sort(compareValues('title'));
             //console.dir('after sort: ' + arr[2].title);
