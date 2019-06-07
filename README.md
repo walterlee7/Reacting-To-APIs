@@ -1,3 +1,5 @@
+<img src="/public/img/redux.png" alt="landing page" width="600"/>
+
 ## React API Fetch - Studio Ghibli
 
 This is a React project to fetches an external API array of objects from the Studio Ghibli website: https://ghibliapi.herokuapp.com/.
