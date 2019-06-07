@@ -1,4 +1,4 @@
-<img src="/public/img/redux.png" alt="landing page" width="600"/>
+<img src="/public/img/ghibli.png" alt="landing page" width="600"/>
 
 ## React API Fetch - Studio Ghibli
 
